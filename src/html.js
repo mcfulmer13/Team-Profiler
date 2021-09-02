@@ -59,15 +59,18 @@ return`
         .map(manager => newMgr(manager))
         .join("")
       );
+      
       html.push(data
-        .filter(employee => employee.getRole() === "Engineer")
-        .map(engineer => newEngineer(engineer))
-        .join("")
-      ); html.push(data
         .filter(employee => employee.getRole() === "Intern")
         .map(intern => newIntern(intern))
         .join("")
       );
+      
+      html.push(data
+        .filter(employee => employee.getRole() === "Engineer")
+        .map(engineer => newEngineer(engineer))
+        .join("")
+      ); 
       return html.join("");
 }
 
